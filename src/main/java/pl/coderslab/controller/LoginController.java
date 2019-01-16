@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.model.User;
+import pl.coderslab.repository.UserRepository;
 import pl.coderslab.service.UserService;
 
 import javax.servlet.http.HttpSession;
@@ -19,6 +20,9 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @RequestMapping(value = "", produces = "text/html; charset=utf-8", method = RequestMethod.GET)
     public String getLogin(Model model) {
@@ -31,6 +35,7 @@ public class LoginController {
     public String login(@RequestParam String login, @RequestParam String password, HttpSession session) {
         if (userService.authenticate(login, password)) {
             session.setAttribute("userLogin", login);
+            session.setAttribute("userEmail", userRepository.findByLogin(login).getEmail());
             return "redirect: /homePage";
         }
         return "/login";

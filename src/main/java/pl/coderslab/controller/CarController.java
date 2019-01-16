@@ -52,7 +52,7 @@ public class CarController {
         return carModelRepository.findAll();
     }
 
-    @ModelAttribute("transmission")
+    @ModelAttribute("transmissions")
     public List<Transmission> getTransmissions() {
         return transmissionRepository.findAll();
     }

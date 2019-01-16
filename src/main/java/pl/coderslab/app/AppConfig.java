@@ -64,6 +64,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         registry.addConverter(getDriveTypeConverter());
         registry.addConverter(getSeatConverter());
         registry.addConverter(getTransmissionConverter());
+        registry.addConverter(getOfferConverter());
+        registry.addConverter(getUserConverter());
+        registry.addConverter(getCarConverter());
     }
 
     @Bean
@@ -94,6 +97,21 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public TransmissionConverter getTransmissionConverter() {
         return new TransmissionConverter();
+    }
+
+    @Bean
+    public OfferConverter getOfferConverter() {
+        return new OfferConverter();
+    }
+
+    @Bean
+    public UserConverter getUserConverter() {
+        return new UserConverter();
+    }
+
+    @Bean
+    public CarConverter getCarConverter() {
+        return new CarConverter();
     }
 
     @Bean(name = "localeResolver")
