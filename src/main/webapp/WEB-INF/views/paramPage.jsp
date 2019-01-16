@@ -11,19 +11,36 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj parametr samochodu</title>
 </head>
-<body>
-<a href="/manufacturer/add">Dodaj markę</a>
-
-<a href="/model/add">Dodaj model</a>
-
-<a href="/transmission/add">Dodaj typ skrzyni biegów</a>
-
-<a href="/fuel/add">Dodaj typ paliwa</a>
-
-<a href="/driveType/add">Dodaj typ napędu</a>
-
-<a href="/seat/add">Dodaj liczbę miejsc</a>
-
-<a href="/homePage">Wróć na stronę główną</a>
+<body class="home">
+<div>
+<table>
+    <thead>
+    <tr>
+        <th colspan="1">Dodaj wybrane parametry do konfiguracji samochodu</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><a href="/manufacturer/add" class="paramButton">Dodaj markę</a></td>
+    </tr>
+    <tr>
+        <td><a href="/model/add" class="paramButton">Dodaj model</a></td>
+    </tr>
+    <tr>
+        <td><a href="/transmission/add" class="paramButton">Dodaj typ skrzyni biegów</a></td>
+    </tr>
+    <tr>
+        <td><a href="/fuel/add" class="paramButton">Dodaj typ paliwa</a></td>
+    </tr>
+    <tr>
+        <td><a href="/driveType/add" class="paramButton">Dodaj typ napędu</a></td>
+    </tr>
+    <tr>
+        <td><a href="/seat/add" class="paramButton">Dodaj liczbę miejsc</a></td>
+    </tr>
+    </tbody>
+</table><br>
+<a href="/homePage" class="returnButton">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

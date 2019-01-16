@@ -1,5 +1,8 @@
 package pl.coderslab.model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +14,11 @@ public class User {
 
     @Column(unique = true)
     private String login;
+
+    @NotEmpty
     private String password;
+
+    @Email
     private String email;
 
     public Long getId() {

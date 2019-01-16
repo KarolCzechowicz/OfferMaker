@@ -13,25 +13,29 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Success!</title>
 </head>
-<body>
-<table>
-    <thead>
-    <th>Typ napędu</th>
-    <th>Edycja</th>
-    <th>Usuwanie</th>
-    </thead>
-    <tbody>
-    <c:forEach items="${driveTypes}" var="item">
-        <tr>
-            <td>${item.type}</td>
-            <td><a href="/driveType/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-            <td><a href="/driveType/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
-<a href="/paramPage">Wróć na stronę parametrów</a>
+<body class="add">
+<div>
+    <table>
+        <thead>
+        <th class="addTd">Typ napędu</th>
+        <th class="addTd">Edycja</th>
+        <th class="addTd">Usuwanie</th>
+        </thead>
+        <tbody>
+        <c:forEach items="${driveTypes}" var="item">
+            <tr>
+                <td class="addTd">${item.type}</td>
+                <td class="addTd"><a href="/driveType/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a>
+                </td>
+                <td class="addTd"><a href="/driveType/delete/${item.id}" class="btn btn-info" role="button">Usuń</a>
+                </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <a href="/paramPage">Wróć na stronę parametrów</a>
 
-<a href="/homePage">Wróć na stronę główną</a>
+    <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

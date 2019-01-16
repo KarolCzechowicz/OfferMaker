@@ -13,7 +13,7 @@ public class Seat {
 
     @NotEmpty
     @Column(unique = true)
-    private Long quantity;
+    private String quantity;
 
     public Long getId() {
         return id;
@@ -23,11 +23,11 @@ public class Seat {
         this.id = id;
     }
 
-    public Long getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Long quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 }

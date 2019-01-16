@@ -16,10 +16,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import pl.coderslab.converter.CarModelConverter;
-import pl.coderslab.converter.DriveTypeConverter;
-import pl.coderslab.converter.FuelConverter;
-import pl.coderslab.converter.ManufacturerConverter;
+import pl.coderslab.converter.*;
 
 import javax.persistence.EntityManagerFactory;
 import javax.validation.Validator;
@@ -65,6 +62,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         registry.addConverter(getCarModelConverter());
         registry.addConverter(getFuelConverter());
         registry.addConverter(getDriveTypeConverter());
+        registry.addConverter(getSeatConverter());
+        registry.addConverter(getTransmissionConverter());
     }
 
     @Bean
@@ -85,6 +84,16 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public DriveTypeConverter getDriveTypeConverter() {
         return new DriveTypeConverter();
+    }
+
+    @Bean
+    public SeatConverter getSeatConverter() {
+        return new SeatConverter();
+    }
+
+    @Bean
+    public TransmissionConverter getTransmissionConverter() {
+        return new TransmissionConverter();
     }
 
     @Bean(name = "localeResolver")

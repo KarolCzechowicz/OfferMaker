@@ -13,25 +13,27 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Success!</title>
 </head>
-<body>
-<table>
-    <thead>
-    <th>Typ skrzyni biegów</th>
-    <th>Edycja</th>
-    <th>Usuwanie</th>
-    </thead>
-    <tbody>
-    <c:forEach items="${transmissions}" var="item">
-        <tr>
-            <td>${item.type}</td>
-            <td><a href="/transmission/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-            <td><a href="/transmission/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
-<a href="/paramPage">Wróć na stronę parametrów</a>
+<body class="add">
+<div>
+    <table>
+        <thead>
+        <th>Typ skrzyni biegów</th>
+        <th>Edycja</th>
+        <th>Usuwanie</th>
+        </thead>
+        <tbody>
+        <c:forEach items="${transmissions}" var="item">
+            <tr>
+                <td>${item.type}</td>
+                <td><a href="/transmission/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                <td><a href="/transmission/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <a href="/paramPage">Wróć na stronę parametrów</a>
 
-<a href="/homePage">Wróć na stronę główną</a>
+    <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

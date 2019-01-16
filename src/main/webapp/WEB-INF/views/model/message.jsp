@@ -12,14 +12,15 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Error Messages</title>
 </head>
-<body>
-<h1>Lista błędów</h1>
+<body class="add">
+<div>
+    <h1>Lista błędów</h1>
 
-<c:forEach items="${violations}" var="item">
+    <c:forEach items="${violations}" var="item">
 
-   Pole: ${item.getPropertyPath()}, komunikat: ${item.getMessage()}<br>
+        Pole: ${item.getPropertyPath()}, komunikat: ${item.getMessage()}<br>
 
-</c:forEach>
-
+    </c:forEach>
+</div>
 </body>
 </html>

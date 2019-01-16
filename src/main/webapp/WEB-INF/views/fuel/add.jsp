@@ -13,7 +13,8 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj Rodzaj Paliwa</title>
 </head>
-<body>
+<body class="add">
+<div>
     <form:form modelAttribute="fuel" method="post">
         <table>
             <thead>
@@ -27,25 +28,25 @@
 
             <form:input path="id" type="hidden"/>
             <tr>
-                <td>Typ napędu:</td>
+                <td class="addTd">Typ paliwa:</td>
                 <td><form:input path="type"/>
                     <form:errors path="type"/></td>
             </tr>
             </tbody>
         </table>
-        <input type="submit" value="wyślij"/><br>
+        <input type="submit" value="Dodaj"/><br>
         <table>
             <thead>
-            <th>Typ paliwa</th>
-            <th>Edycja</th>
-            <th>Usuwanie</th>
+            <th class="addTd">Typ paliwa</th>
+            <th class="addTd">Edycja</th>
+            <th class="addTd">Usuwanie</th>
             </thead>
             <tbody>
             <c:forEach items="${fuels}" var="item">
                 <tr>
-                    <td>${item.type}</td>
-                    <td><a href="/fuel/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-                    <td><a href="/fuel/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
+                    <td class="addTd">${item.type}</td>
+                    <td class="addTd"><a href="/fuel/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                    <td class="addTd"><a href="/fuel/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -54,5 +55,6 @@
     <a href="/paramPage">Wróć na stronę parametrów</a>
 
     <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

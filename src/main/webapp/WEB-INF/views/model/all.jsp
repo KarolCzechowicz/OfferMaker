@@ -13,27 +13,31 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Success!</title>
 </head>
-<body>
-<table>
-    <thead>
-    <th>Nazwa modelu</th>
-    <th>Typ nadwozia</th>
-    <th>Edycja</th>
-    <th>Usuwanie</th>
-    </thead>
-    <tbody>
-    <c:forEach items="${carModels}" var="item">
-        <tr>
-            <td>${item.name}</td>
-            <td>${item.body}</td>
-            <td><a href="/model/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-            <td><a href="/model/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
-<a href="/paramPage">Wróć na stronę parametrów</a>
+<body class="add">
+<div>
+    <table>
+        <thead>
+        <th class="addTd">Nazwa modelu</th>
+        <th class="addTd">Typ nadwozia</th>
+        <th class="addTd">Edycja</th>
+        <th class="addTd">Usuwanie</th>
+        </thead>
+        <tbody>
+        <c:forEach items="${carModels}" var="item">
+            <tr>
+                <td class="addTd">${item.name}</td>
+                <td class="addTd">${item.body}</td>
+                <td class="addTd"><a href="/model/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                <td class="addTd"><a href="/model/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <a href="/paramPage">Wróć na stronę parametrów</a>
 
-<a href="/homePage">Wróć na stronę główną</a>
+    <a href="/manufacturer/all">Przypisz model do producenta</a>
+
+    <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

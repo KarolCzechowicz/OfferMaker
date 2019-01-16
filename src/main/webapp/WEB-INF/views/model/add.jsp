@@ -13,53 +13,55 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj Model</title>
 </head>
-<body>
+<div>
+    <body class="add">
     <form:form modelAttribute="model" method="post">
-        <table>
-            <thead>
-            <tr>
-                <th colspan="2">Dodaj model</th>
-            </tr>
-            </thead>
-            <tbody>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="2">Dodaj model</th>
+        </tr>
+        </thead>
+        <tbody>
 
-            <form:errors path="*"/><br>
+        <form:errors path="*"/><br>
 
-            <form:input path="id" type="hidden"/>
+        <form:input path="id" type="hidden"/>
+        <tr>
+            <td class="addTd">Nazwa modelu:</td>
+            <td><form:input path="name"/>
+                <form:errors path="name"/></td>
+        </tr>
+        <tr>
+            <td class="addTd">Typ nadwozia:</td>
+            <td><form:input path="body"/>
+                <form:errors path="body"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Dodaj"/><br>
+    <table>
+        <thead>
+        <th class="addTd">Nazwa modelu</th>
+        <th class="addTd">Typ nadwozia</th>
+        <th class="addTd">Edycja</th>
+        <th class="addTd">Usuwanie</th>
+        </thead>
+        <tbody>
+        <c:forEach items="${models}" var="item">
             <tr>
-                <td>Nazwa modelu:</td>
-                <td><form:input path="name"/>
-                    <form:errors path="name"/></td>
+                <td class="addTd">${item.name}</td>
+                <td class="addTd">${item.body}</td>
+                <td class="addTd"><a href="/model/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                <td class="addTd"><a href="/model/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
             </tr>
-            <tr>
-                <td>Typ nadwozia:</td>
-                <td><form:input path="body"/>
-                    <form:errors path="body"/></td>
-            </tr>
-            </tbody>
-        </table>
-        <input type="submit" value="wyślij"/><br>
-        <table>
-            <thead>
-            <th>Nazwa modelu</th>
-            <th>Typ nadwozia</th>
-            <th>Edycja</th>
-            <th>Usuwanie</th>
-            </thead>
-            <tbody>
-            <c:forEach items="${models}" var="item">
-                <tr>
-                    <td>${item.name}</td>
-                    <td>${item.body}</td>
-                    <td><a href="/model/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-                    <td><a href="/model/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+        </c:forEach>
+        </tbody>
+    </table>
     </form:form>
     <a href="/paramPage">Wróć na stronę parametrów</a>
 
     <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>

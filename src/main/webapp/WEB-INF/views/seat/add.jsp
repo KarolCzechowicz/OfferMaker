@@ -13,7 +13,8 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj Ilość Miejsc</title>
 </head>
-<body>
+<body class="add">
+<div>
     <form:form modelAttribute="seat" method="post">
         <table>
             <thead>
@@ -27,25 +28,25 @@
 
             <form:input path="id" type="hidden"/>
             <tr>
-                <td>Ilość miejsc:</td>
+                <td class="addTd">Ilość miejsc:</td>
                 <td><form:input path="quantity"/>
                     <form:errors path="quantity"/></td>
             </tr>
             </tbody>
         </table>
-        <input type="submit" value="wyślij"/><br>
+        <input type="submit" value="Dodaj"/><br>
         <table>
             <thead>
-            <th>Ilość miejsc</th>
-            <th>Edycja</th>
-            <th>Usuwanie</th>
+            <th class="addTd">Ilość miejsc</th>
+            <th class="addTd">Edycja</th>
+            <th class="addTd">Usuwanie</th>
             </thead>
             <tbody>
             <c:forEach items="${seats}" var="item">
                 <tr>
-                    <td>${item.quantity}</td>
-                    <td><a href="/seat/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-                    <td><a href="/seat/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
+                    <td class="addTd">${item.quantity}</td>
+                    <td class="addTd"><a href="/seat/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                    <td class="addTd"><a href="/seat/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -54,5 +55,6 @@
     <a href="/paramPage">Wróć na stronę parametrów</a>
 
     <a href="/homePage">Wróć na stronę główną</a>
+</div>
 </body>
 </html>
