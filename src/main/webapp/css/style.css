@@ -98,4 +98,9 @@ a:active {
     margin-top: 30%;
 }
 
+#msg {
+    color: darkred;
+    visibility: hidden;
+}
+
 

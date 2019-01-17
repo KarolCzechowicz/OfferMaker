@@ -38,7 +38,7 @@ public class LoginController {
             session.setAttribute("userEmail", userRepository.findByLogin(login).getEmail());
             return "redirect: /homePage";
         }
-        return "/login";
+        return "redirect:/?";
     }
 
     @RequestMapping(value = "/register", produces = "text/html; charset=utf-8", method = RequestMethod.GET)

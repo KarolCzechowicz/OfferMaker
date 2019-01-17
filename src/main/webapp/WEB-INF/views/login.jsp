@@ -34,11 +34,16 @@
                 <td><form:password path="password"/>
                     <form:errors path="password"/></td>
             </tr>
+            <tr>
+                <td id="msg" colspan="2"></td>
+            </tr>
             </tbody>
         </table>
         <input type="submit" value="Zaloguj" class="submit"/><br>
     </form:form>
+
     <a href="/register">Rejestracja Użytkownika</a>
 </div>
+<script src="/js/login.js"></script>
 </body>
 </html>
