@@ -56,6 +56,6 @@ public class LoginController {
             userService.register(user);
             return "redirect: /";
         }
-        return "/register";
+        return "redirect:/register/?";
     }
 }

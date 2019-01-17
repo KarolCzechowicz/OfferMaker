@@ -103,4 +103,9 @@ a:active {
     visibility: hidden;
 }
 
+#msg2 {
+    color: darkred;
+    visibility: hidden;
+}
+
 

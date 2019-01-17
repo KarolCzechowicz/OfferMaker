@@ -41,10 +41,14 @@
                 <td><form:input path="email"/>
                     <form:errors path="email"/></td>
             </tr>
+            <tr>
+                <td id="msg2" colspan="2"></td>
+            </tr>
             </tbody>
         </table>
         <input type="submit" value="Zarejestruj" class="submit"/><br>
     </form:form>
 </div>
+<script src="/js/register.js"></script>
 </body>
 </html>
