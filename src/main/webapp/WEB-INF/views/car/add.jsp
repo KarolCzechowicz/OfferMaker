@@ -138,51 +138,26 @@
                 <th colspan="20" class="addTd">Wszystkie samochody</th>
             </tr>
             <tr>
-                <th class="addTd">Nazwa marki:</th>
-                <th class="addTd">Model:</th>
-                <th class="addTd">Skrzynia biegów:</th>
-                <th class="addTd">Typ paliwa:</th>
-                <th class="addTd">Spalanie w mieście:</th>
-                <th class="addTd">Spalanie w trasie:</th>
-                <th class="addTd">Silnik:</th>
-                <th class="addTd">Moc silnika:</th>
-                <th class="addTd">Typ napędu:</th>
-                <th class="addTd">Ilość miejsc:</th>
-                <th class="addTd">Opis:</th>
-                <th class="addTd">Klimatyzacja:</th>
-                <th class="addTd">Czujniki parkowania:</th>
-                <th class="addTd">Kamera cofania:</th>
-                <th class="addTd">Isofix:</th>
-                <th class="addTd">Poduszki powietrzne:</th>
-                <th class="addTd">Nawigacja:</th>
-                <th class="addTd">CElektryczne szyby:</th>
-                <th class="addTd">Edycja</th>
-                <th class="addTd">Usuwanie</th>
+                <th class="allTd">Nazwa marki:</th>
+                <th class="allTd">Model:</th>
+                <th class="allTd">Nadwozie:</th>
+                <th class="allTd">Zdjęcie:</th>
+                <th class="allTd">Skrzynia biegów:</th>
+                <th class="allTd">Typ paliwa:</th>
+                <th class="allTd">Edycja</th>
+                <th class="allTd">Usuwanie</th>
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${cars}" var="item">
-                <tr class="addTd">
-                    <td class="addTd">${item.manufacturer.name}</td>
-                    <td class="addTd">${item.carModel.name}</td>
-                    <td class="addTd">${item.transmission.type}</td>
-                    <td class="addTd">${item.fuel.type}</td>
-                    <td class="addTd">${item.fuelCity}</td>
-                    <td class="addTd">${item.fuelHighway}</td>
-                    <td class="addTd">${item.engine}</td>
-                    <td class="addTd">${item.horsePower}</td>
-                    <td class="addTd">${item.driveType}</td>
-                    <td class="addTd">${item.seat}</td>
-                    <td class="addTd">${item.description}</td>
-                    <td class="addTd">${item.airCondition}</td>
-                    <td class="addTd">${item.parkAssist}</td>
-                    <td class="addTd">${item.reverseCamera}</td>
-                    <td class="addTd">${item.isofix}</td>
-                    <td class="addTd">${item.airBags}</td>
-                    <td class="addTd">${item.navigation}</td>
-                    <td class="addTd">${item.electricWindows}</td>
-                    <td class="addTd"><a href="/car/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
-                    <td class="addTd"><a href="/car/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
+                    <td class="allTd">${item.manufacturer.name}</td>
+                    <td class="allTd">${item.carModel.name}</td>
+                    <td class="allTd">${item.carModel.body}</td>
+                    <td class="allTd"><img src="/images/${item.imageLink}" alt="zdjęcie" width="85" height="65"></td>
+                    <td class="allTd">${item.transmission.type}</td>
+                    <td class="allTd">${item.fuel.type}</td>
+                    <td class="allTd"><a href="/car/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
+                    <td class="allTd"><a href="/car/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -190,6 +165,8 @@
     </form:form>
 
     <a href="/homePage">Wróć na stronę główną</a>
+
+    <a href="/car/all">Pokaż wszystkie</a>
 
     <a href="/paramPage">Przejdź na stronę parametrów</a>
 
