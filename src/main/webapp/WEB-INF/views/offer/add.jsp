@@ -30,7 +30,7 @@
             <tr>
                 <td class="addTd">Wybrany samochód:</td>
                 <td><form:select path="car">
-                    <form:options items="${cars}" itemValue="id" itemLabel="manufacturer"/>
+                    <form:options items="${cars}" itemValue="id" itemLabel="manufacturer.name"/>
                 </form:select></td>
             </tr>
             <tr>
@@ -50,10 +50,6 @@
                 <td class="addTd">Dodatkowe Informacje:</td>
                 <td><form:textarea path="info"/>
                     <form:errors path="info"/></td>
-            </tr>
-            <tr>
-                <td class="addTd">Zdjęcie:</td>
-                <td><input type="file" name="uploadedFileName" id="fileName" value=""></td>
             </tr>
             </tbody>
         </table>

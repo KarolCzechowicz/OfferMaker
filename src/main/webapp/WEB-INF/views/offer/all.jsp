@@ -33,7 +33,7 @@
                 <td class="addTd">${item.dateTo}</td>
                 <td class="addTd">${item.price}</td>
                 <td class="addTd">${item.info}</td>
-                <td class="addTd"><img src="/images/${item.imageLink}" alt="zdjęcie" width="500" height="400"></td>
+                <td class="addTd"><img src="/images/${item.car.imageLink}" alt="zdjęcie" width="100" height="100"></td>
                 <td class="addTd"><a href="/offer/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
                 <td class="addTd"><a href="/offer/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
             </tr>
@@ -43,7 +43,7 @@
 
     <a href="/homePage">Wróć na stronę główną</a>
 
-    <a href="/car/add">Dodaj kolejny</a>
+    <a href="/offer/add">Dodaj kolejną ofertę</a>
 
 </div>
 </body>

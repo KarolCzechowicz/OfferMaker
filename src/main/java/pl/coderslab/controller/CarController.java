@@ -3,16 +3,18 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import pl.coderslab.model.*;
 import pl.coderslab.repository.*;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import javax.validation.Validator;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -82,11 +84,19 @@ public class CarController {
     }
 
     @RequestMapping(value = "/add", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
-    public String save(@Valid Car car, BindingResult result) {
+    public String save(@Valid Car car, BindingResult result, HttpSession session) {
 
         if (result.hasErrors()) {
             return "/car/add";
         }
+        String login = (String) session.getAttribute("userLogin");
+        String email = (String) session.getAttribute("userEmail");
+        car.setUserLogin(login);
+        car.setUserEmail(email);
+
+        Date date = Calendar.getInstance().getTime();
+        car.setCreated(date);
+        car.setUpdated(date);
         carRepository.save(car);
         return "redirect:/car/all";
     }
@@ -106,11 +116,18 @@ public class CarController {
     }
 
     @RequestMapping(value = "/edit/{id}", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
-    public String update(@Valid Car car, BindingResult result) {
+    public String update(@Valid Car car, BindingResult result, HttpSession session) {
 
         if (result.hasErrors()) {
             return "/car/add";
         }
+        String login = (String) session.getAttribute("userLogin");
+        String email = (String) session.getAttribute("userEmail");
+        car.setUserLogin(login);
+        car.setUserEmail(email);
+
+        Date date = Calendar.getInstance().getTime();
+        car.setUpdated(date);
         carRepository.save(car);
         return "redirect:/car/all";
     }

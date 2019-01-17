@@ -2,11 +2,10 @@ package pl.coderslab.app;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.multipart.support.MultipartFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import javax.servlet.*;
 
 public class SpringDiApplication implements WebApplicationInitializer {
     @Override
@@ -19,5 +18,6 @@ public class SpringDiApplication implements WebApplicationInitializer {
                 servletContext.addServlet("dispatcher", new DispatcherServlet(context));
         servlet.setLoadOnStartup(1);
         servlet.addMapping("/");
+
     }
 }

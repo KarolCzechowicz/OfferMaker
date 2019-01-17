@@ -24,8 +24,6 @@
             <tbody>
 
             <form:errors path="*"/><br>
-
-            <form:input path="id" type="hidden"/>
             <tr>
                 <td>Login:</td>
                 <td><form:input path="login"/>

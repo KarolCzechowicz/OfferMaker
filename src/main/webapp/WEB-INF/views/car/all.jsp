@@ -19,6 +19,7 @@
         <thead>
         <th class="addTd">Nazwa marki:</th>
         <th class="addTd">Model:</th>
+        <th class="addTd">Zdjęcie:</th>
         <th class="addTd">Edycja</th>
         <th class="addTd">Usuwanie</th>
         </thead>
@@ -27,6 +28,7 @@
             <tr>
                 <td class="addTd">${item.manufacturer.name}</td>
                 <td class="addTd">${item.carModel.name}</td>
+                <td class="addTd"><img src="/images/${item.imageLink}" alt="zdjęcie" width="100" height="100"></td>
                 <td class="addTd"><a href="/car/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
                 <td class="addTd"><a href="/car/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
             </tr>

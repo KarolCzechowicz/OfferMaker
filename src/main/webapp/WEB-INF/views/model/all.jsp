@@ -35,7 +35,7 @@
     </table>
     <a href="/paramPage">Wróć na stronę parametrów</a>
 
-    <a href="/manufacturer/all">Przypisz model do producenta</a>
+    <a href="/manufacturer/add">Przypisz model do producenta</a>
 
     <a href="/homePage">Wróć na stronę główną</a>
 </div>

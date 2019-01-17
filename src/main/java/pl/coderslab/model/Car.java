@@ -1,6 +1,7 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "cars")
@@ -39,6 +40,16 @@ public class Car {
     private boolean airBags;
     private boolean navigation;
     private boolean electricWindows;
+
+    private String imageLink;
+
+    private Date created;
+
+    private Date updated;
+
+    private String userLogin;
+
+    private String userEmail;
 
     public Long getId() {
         return id;
@@ -190,5 +201,45 @@ public class Car {
 
     public void setElectricWindows(boolean electricWindows) {
         this.electricWindows = electricWindows;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public String getUserLogin() {
+        return userLogin;
+    }
+
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 }

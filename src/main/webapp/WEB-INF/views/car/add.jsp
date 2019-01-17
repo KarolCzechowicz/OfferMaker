@@ -12,6 +12,7 @@
 <head>
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj Samochód</title>
+
 </head>
 <body class="add">
 <div>
@@ -123,6 +124,11 @@
                 <td><form:checkbox path="electricWindows"/>
                     <form:errors path="electricWindows"/></td>
             </tr>
+            <tr>
+                <td class="addTd">Zdjęcie:</td>
+                <td><input type="file" id="img"/></td>
+            </tr>
+                <form:input path="imageLink" id="link" value="" type="hidden"/>
             </tbody>
         </table>
         <input type="submit" value="Dodaj"/><br><br>
@@ -188,5 +194,6 @@
     <a href="/paramPage">Przejdź na stronę parametrów</a>
 
 </div>
+<script src="/js/imageName.js"></script>
 </body>
 </html>

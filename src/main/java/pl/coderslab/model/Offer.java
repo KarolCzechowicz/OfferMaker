@@ -21,8 +21,6 @@ public class Offer {
 
     private String info;
 
-    private String imageLink;
-
     private Date created;
 
     private Date updated;
@@ -77,14 +75,6 @@ public class Offer {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public String getImageLink() {
-        return imageLink;
-    }
-
-    public void setImageLink(String imageLink) {
-        this.imageLink = imageLink;
     }
 
     public Date getCreated() {
