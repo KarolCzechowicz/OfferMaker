@@ -15,7 +15,7 @@
 </head>
 <body class="add">
 <div>
-    <form:form modelAttribute="offer" enctype="multipart/form-data" method="post">
+    <form:form modelAttribute="offer" method="post">
         <table>
             <thead>
             <tr>
@@ -35,13 +35,11 @@
             </tr>
             <tr>
                 <td class="addTd">Od:</td>
-                <td><form:input path="dateFrom"/>
-                    <form:errors path="dateFrom"/></td>
+                <td><form:input type="date" path="dateFrom"/></td>
             </tr>
             <tr>
                 <td class="addTd">Do:</td>
-                <td><form:input path="dateTo"/>
-                    <form:errors path="dateTo"/></td>
+                <td><form:input type="date" path="dateTo"/></td>
             </tr>
             <tr>
                 <td class="addTd">Cena:</td>

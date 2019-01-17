@@ -3,11 +3,8 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 import pl.coderslab.model.*;
 import pl.coderslab.repository.*;
 
@@ -16,7 +13,6 @@ import javax.validation.Valid;
 import javax.validation.Validator;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -45,8 +41,8 @@ public class OfferController {
         return "/offer/add";
     }
 
-    @RequestMapping(value = "/add", produces = "text/html; charset=utf-8", method = RequestMethod.POST, consumes = {"multipart/form-data"})
-    public String save(@Valid @RequestParam("uploadedFileName") Offer offer, BindingResult result, HttpSession session, MultipartFile multipart, ModelMap model) {
+    @RequestMapping(value = "/add", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
+    public String save(@Valid Offer offer, BindingResult result, HttpSession session) {
 
         if (result.hasErrors()) {
             return "/offer/add";
@@ -60,7 +56,6 @@ public class OfferController {
         Date date = Calendar.getInstance().getTime();
         offer.setCreated(date);
 
-        offer.setImageLink(multipart.getOriginalFilename());
         offerRepository.save(offer);
         return "redirect:/offer/all";
     }
