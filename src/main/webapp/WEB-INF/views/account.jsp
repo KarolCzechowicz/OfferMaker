@@ -2,55 +2,41 @@
 <%--
   Created by IntelliJ IDEA.
   User: karol
-  Date: 16.01.19
-  Time: 12:45
+  Date: 17.01.19
+  Time: 18:31
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <link href="/css/style.css" rel="stylesheet">
-    <title>Rejestracja użytkownika</title>
+    <title>Ustawienia konta</title>
 </head>
-<body class="login">
+<body class="add">
 <div>
     <form:form modelAttribute="user" method="post">
         <table>
             <thead>
             <tr>
-                <th colspan="2">Zarejestruj się</th>
+                <th colspan="2">Edytuj konto</th>
             </tr>
             </thead>
             <tbody>
-
             <form:errors path="*"/><br>
-
-            <form:input path="id" type="hidden"/>
             <tr>
-                <td>Login:</td>
-                <td><form:input path="login"/>
-                    <form:errors path="login"/></td>
-            </tr>
-            <tr>
-                <td>Hasło:</td>
+                <td>Podaj hasło:</td>
                 <td><form:password path="password"/>
                     <form:errors path="password"/></td>
             </tr>
             <tr>
-                <td>Email:</td>
-                <td><form:input path="email"/>
-                    <form:errors path="email"/></td>
-            </tr>
-            <tr>
-                <td id="msg2" colspan="2"></td>
+                <td id="msg3" colspan="2"></td>
             </tr>
             </tbody>
         </table>
-        <input type="submit" value="Zarejestruj" class="submit"/><br>
+        <input type="submit" value="Zatwierdź"/><br>
     </form:form>
-
-    <a href="/">Powrót do strony logowania</a>
+    <a href="/homePage">Wróć na stronę główną</a>
 </div>
-<script src="/js/register.js"></script>
+<script src="/js/account.js"></script>
 </body>
 </html>

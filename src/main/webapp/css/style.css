@@ -91,7 +91,7 @@ a:active {
 }
 
 .returnButton {
-    margin-top: 6%;
+    margin-top: 2%;
 }
 
 .logoutButton {
@@ -104,6 +104,10 @@ a:active {
 }
 
 #msg2 {
+    color: darkred;
+    visibility: hidden;
+}
+#msg3 {
     color: darkred;
     visibility: hidden;
 }

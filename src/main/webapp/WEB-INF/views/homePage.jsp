@@ -16,12 +16,13 @@
 <div>
     <table>
         <thead>
-        <th colspan="3">Wybierz co chcesz zrobić</th>
+        <th colspan="4">Wybierz co chcesz zrobić</th>
         </thead>
         <tbody>
         <td><a href="/offer/add" class="homeButton">Stwórz ofertę</a></td>
         <td><a href="/car/add" class="homeButton">Dodaj samochód</a></td>
         <td><a href="/paramPage" class="homeButton">Edycja parametrów samochodów</a></td>
+        <td><a href="/account" class="homeButton">Konto</a></td>
         </tbody>
     </table>
     <a href="/logout" class="logoutButton">Wyloguj</a>
