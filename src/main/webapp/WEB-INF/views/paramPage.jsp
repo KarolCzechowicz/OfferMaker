@@ -11,7 +11,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj parametr samochodu</title>
 </head>
-<body class="home">
+<body class="add">
 <div>
 <table>
     <thead>

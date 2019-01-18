@@ -21,8 +21,15 @@ table {
     margin-top: 10px;
 }
 
+.usr {
+    margin-left: 5px;
+    float: left;
+    position: absolute;
+}
+
 div {
     text-align: center;
+    position: relative;
 }
 
 .login {
@@ -30,13 +37,23 @@ div {
     background-position: center;
 }
 
-.home {
+#home {
     background-image: url("/images/panamera.jpg");
     background-position: center;
 }
 
 .add {
     background-image: url("/images/panamera.jpg");
+    background-position: center;
+}
+
+.off {
+    background-image: url("/images/hand.jpeg");
+    background-position: center;
+}
+
+.acc {
+    background-image: url("/images/road.jpeg");
     background-position: center;
 }
 

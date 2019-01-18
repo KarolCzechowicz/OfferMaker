@@ -12,7 +12,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Success!</title>
 </head>
-<body class="add">
+<body class="off">
 <div>
     <table>
         <thead>
@@ -33,7 +33,7 @@
                 <td class="addTd">${item.dateTo}</td>
                 <td class="addTd">${item.price}</td>
                 <td class="addTd">${item.info}</td>
-                <td class="addTd"><img src="/images/${item.car.imageLink}" alt="zdjęcie" width="100" height="100"></td>
+                <td class="addTd"><img src="/images/${item.car.imageLink}" alt="zdjęcie" width="80" height="60"></td>
                 <td class="addTd"><a href="/offer/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
                 <td class="addTd"><a href="/offer/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
             </tr>

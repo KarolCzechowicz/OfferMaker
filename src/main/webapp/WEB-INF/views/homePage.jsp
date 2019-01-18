@@ -12,8 +12,16 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Oferter</title>
 </head>
-<body class="home">
+<body id="home">
 <div>
+    <table class="usr">
+        <thead>
+        <th class="addTd">User</th>
+        </thead>
+        <tbody>
+        <td class="addTd">${login}</td>
+        </tbody>
+    </table>
     <table>
         <thead>
         <th colspan="4">Wybierz co chcesz zrobić</th>

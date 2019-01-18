@@ -13,7 +13,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Dodaj Ofertę</title>
 </head>
-<body class="add">
+<body class="off">
 <div>
     <form:form modelAttribute="offer" method="post">
         <table>
@@ -30,7 +30,9 @@
             <tr>
                 <td class="addTd">Wybrany samochód:</td>
                 <td><form:select path="car">
-                    <form:options items="${cars}" itemValue="id" itemLabel="manufacturer.name"/>
+                    <c:forEach var="car" items="${cars}">
+                        <form:option value="${car.id}">${car.manufacturer.name}  ${car.carModel.name}  ${car.carModel.body}  ${car.transmission.type}  ${car.fuel.type} <img src="/images/${car.imageLink}" alt="zdjęcie" width="65" height=45></form:option>
+                    </c:forEach>
                 </form:select></td>
             </tr>
             <tr>

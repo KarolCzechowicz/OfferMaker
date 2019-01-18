@@ -12,9 +12,17 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Ustawienia konta</title>
 </head>
-<body class="add">
+<body class="acc">
 <div>
     <form:form modelAttribute="user" method="post">
+        <table class="usr">
+            <thead>
+            <th class="addTd">User</th>
+            </thead>
+            <tbody>
+            <td class="addTd">${login}</td>
+            </tbody>
+        </table>
         <table>
             <thead>
             <tr>
@@ -22,7 +30,6 @@
             </tr>
             </thead>
             <tbody>
-            <form:errors path="*"/><br>
             <tr>
                 <td>Podaj nowe hasło:</td>
                 <td><form:password path="password"/>

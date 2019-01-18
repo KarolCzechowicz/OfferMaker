@@ -12,7 +12,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Error Messages</title>
 </head>
-<body class="add">
+<body class="off">
 <div>
     <h1>Lista błędów</h1>
 

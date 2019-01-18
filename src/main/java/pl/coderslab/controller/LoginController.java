@@ -61,8 +61,10 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/account", produces = "text/html; charset=utf-8", method = RequestMethod.GET)
-    public String getAccount(Model model) {
+    public String getAccount(Model model, Model model2, HttpSession session) {
         model.addAttribute("user", new User());
+        String login = (String) session.getAttribute("userLogin");
+        model2.addAttribute("login", login);
         return "/account";
     }
 
@@ -80,8 +82,10 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/account2", produces = "text/html; charset=utf-8", method = RequestMethod.GET)
-    public String getRegister2(Model model) {
+    public String getRegister2(Model model, Model model2, HttpSession session) {
         model.addAttribute("user", new User());
+        String login = (String) session.getAttribute("userLogin");
+        model2.addAttribute("login", login);
         return "/account2";
     }
 

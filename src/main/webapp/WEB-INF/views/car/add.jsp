@@ -24,10 +24,7 @@
             </tr>
             </thead>
             <tbody>
-
-            <form:errors path="*"/><br>
-
-            <form:input path="id" type="hidden"/>
+            <form:errors path="*"/>
             <tr>
                 <td class="addTd">Nazwa marki:</td>
                 <td><form:select path="manufacturer">
