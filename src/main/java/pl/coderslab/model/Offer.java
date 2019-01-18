@@ -21,6 +21,8 @@ public class Offer {
 
     private String info;
 
+    private String customer;
+
     private Date created;
 
     private Date updated;
@@ -75,6 +77,14 @@ public class Offer {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
     }
 
     public Date getCreated() {

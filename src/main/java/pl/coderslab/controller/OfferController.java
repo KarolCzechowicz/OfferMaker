@@ -96,4 +96,10 @@ public class OfferController {
         offerRepository.delete(offerRepository.findOne(id));
         return "redirect:/offer/all";
     }
+
+    @RequestMapping(value = "/view/{id}", produces = "text/html; charset=utf-8", method = RequestMethod.GET)
+    public String viewOffer(@PathVariable Long id, Model model) {
+        model.addAttribute("offer", offerRepository.findOne(id));
+        return "/offer/view";
+    }
 }

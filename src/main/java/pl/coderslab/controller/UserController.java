@@ -14,6 +14,7 @@ import javax.validation.Validator;
 import java.util.List;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -68,6 +69,6 @@ public class UserController {
     @RequestMapping("/delete/{id}")
     public String deleteUser(@PathVariable Long id) {
         userRepository.delete(userRepository.findOne(id));
-        return "redirect:/user/all";
+        return "redirect:/logout";
     }
 }

@@ -53,6 +53,11 @@
                 <td><form:textarea path="info"/>
                     <form:errors path="info"/></td>
             </tr>
+            <tr>
+                <td class="addTd">Kontakt do klienta:</td>
+                <td><form:textarea path="customer"/>
+                    <form:errors path="customer"/></td>
+            </tr>
             </tbody>
         </table>
         <input type="submit" value="Dodaj"/><br><br>

@@ -82,10 +82,13 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/account2", produces = "text/html; charset=utf-8", method = RequestMethod.GET)
-    public String getRegister2(Model model, Model model2, HttpSession session) {
+    public String getRegister2(Model model, Model model2, Model model3, HttpSession session) {
         model.addAttribute("user", new User());
         String login = (String) session.getAttribute("userLogin");
         model2.addAttribute("login", login);
+        User current = userRepository.findByLogin(login);
+        Long id = current.getId();
+        model3.addAttribute("id", id);
         return "/account2";
     }
 

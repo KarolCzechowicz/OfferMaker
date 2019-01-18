@@ -17,23 +17,29 @@
     <table>
         <thead>
         <th class="addTd">Samochód:</th>
+        <th class="addTd">Zdjęcie:</th>
         <th class="addTd">Od:</th>
         <th class="addTd">Do:</th>
         <th class="addTd">Cena:</th>
-        <th class="addTd">Dodatkowe informacje:</th>
-        <th class="addTd">Zdjęcie:</th>
+        <th class="addTd">Kotakt do klienta:</th>
+        <th class="addTd">Utworzona przez:</th>
+        <th class="addTd">Utworzono:</th>
+        <th class="addTd">Widok pliku:</th>
         <th class="addTd">Edycja</th>
         <th class="addTd">Usuwanie</th>
         </thead>
         <tbody>
         <c:forEach items="${offers}" var="item">
             <tr>
-                <td class="addTd">${item.car.manufacturer.name}</td>
+                <td class="addTd">${item.car.manufacturer.name} ${item.car.carModel.name}</td>
+                <td class="addTd"><img src="/images/${item.car.imageLink}" alt="zdjęcie" width="80" height="60"></td>
                 <td class="addTd">${item.dateFrom}</td>
                 <td class="addTd">${item.dateTo}</td>
                 <td class="addTd">${item.price}</td>
-                <td class="addTd">${item.info}</td>
-                <td class="addTd"><img src="/images/${item.car.imageLink}" alt="zdjęcie" width="80" height="60"></td>
+                <td class="addTd">${item.customer}</td>
+                <td class="addTd">${item.userLogin}</td>
+                <td class="addTd">${item.created}</td>
+                <td class="addTd"><a href="/offer/view/${item.id}" class="btn btn-info" role="button">Widok</a></td>
                 <td class="addTd"><a href="/offer/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
                 <td class="addTd"><a href="/offer/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
             </tr>

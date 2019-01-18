@@ -17,7 +17,7 @@ public class Manufacturer {
     @Column(unique = true)
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<CarModel> carModels = new ArrayList<>();
 
     public Long getId() {

@@ -20,7 +20,9 @@
             <th class="addTd">User</th>
             </thead>
             <tbody>
-            <td class="addTd">${login}</td>
+            <tr>
+                <td class="addTd">${login}</td>
+            </tr>
             </tbody>
         </table>
         <table>
@@ -39,6 +41,9 @@
                 <td>Podaj nowy email:</td>
                 <td><form:input path="email"/>
                     <form:errors path="email"/></td>
+            </tr>
+            <tr>
+                <td class="addTd" colspan="2"><a href="/user/delete/${id}" class="btn btn-info" role="button" style="color: firebrick">Usuń konto</a></td>
             </tr>
             <tr>
                 <td id="msg4" colspan="2"></td>

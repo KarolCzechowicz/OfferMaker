@@ -57,6 +57,12 @@ div {
     background-position: center;
 }
 
+.vie {
+    background-image: none;
+    background-position: center;
+    background: darkgray;
+}
+
 .addTd {
     font-size: 20px;
 }
