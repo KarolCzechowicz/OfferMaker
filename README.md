@@ -8,7 +8,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-  <h3 align="center">Offer Maker</h3>
+  <h1 align="center">Offer Maker</h1>
 <br />
 <p align="center">
   <a href="https://github.com/KarolCzechowicz/OfferMaker">
