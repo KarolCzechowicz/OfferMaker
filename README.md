@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/KarolCzechowicz/OfferMaker">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/main/webapp/images/exampleoffer2.jpg" alt="Logo" width="140" height="80">
   </a>
 
   <h3 align="center">Offer Maker</h3>
@@ -46,6 +46,7 @@
 
 Simple web application designed to help creating individual car rental offers to customers. Has users management, and functonality to send indyvidual offer via customer mail as PDF attachment or save it directly to computer from browser. A lot can be done to add more features. 
 
+<img src="src/main/webapp/images/exampleoffer.jpg" alt="Logo" width="160" height="100">
 
 ### Built With
 
