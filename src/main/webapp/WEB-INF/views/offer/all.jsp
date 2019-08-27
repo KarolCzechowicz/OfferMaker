@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Success!</title>
 </head>
 <body class="off">
@@ -24,6 +24,7 @@
         <th class="addTd">Kotakt do klienta:</th>
         <th class="addTd">Utworzona przez:</th>
         <th class="addTd">Utworzono:</th>
+        <th class="addTd" id="updated1">Edytowano:</th>
         <th class="addTd">Widok pliku:</th>
         <th class="addTd">Edycja</th>
         <th class="addTd">Usuwanie</th>
@@ -36,9 +37,10 @@
                 <td class="addTd">${item.dateFrom}</td>
                 <td class="addTd">${item.dateTo}</td>
                 <td class="addTd">${item.price}</td>
-                <td class="addTd">${item.customer}</td>
+                <td class="addTd">${item.customerEmail}</td>
                 <td class="addTd">${item.userLogin}</td>
                 <td class="addTd">${item.created}</td>
+                <td class="addTd" id="updated2">${item.updated}</td>
                 <td class="addTd"><a href="/offer/view/${item.id}" class="btn btn-info" role="button">Widok</a></td>
                 <td class="addTd"><a href="/offer/edit/${item.id}" class="btn btn-info" role="button">Edytuj</a></td>
                 <td class="addTd"><a href="/offer/delete/${item.id}" class="btn btn-info" role="button">Usuń</a></td>
@@ -52,5 +54,6 @@
     <a href="/offer/add">Dodaj kolejną ofertę</a>
 
 </div>
+<script src="/js/offer.js" type="text/javascript"></script>
 </body>
 </html>

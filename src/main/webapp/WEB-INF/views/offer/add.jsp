@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Dodaj Ofertę</title>
 </head>
 <body class="off">
@@ -54,9 +54,14 @@
                     <form:errors path="info"/></td>
             </tr>
             <tr>
+                <td class="addTd">Email klienta:</td>
+                <td><form:textarea path="customerEmail"/>
+                    <form:errors path="customerEmail"/></td>
+            </tr>
+            <tr>
                 <td class="addTd">Kontakt do klienta:</td>
-                <td><form:textarea path="customer"/>
-                    <form:errors path="customer"/></td>
+                <td><form:textarea path="customerOtherContactInfo"/>
+                    <form:errors path="customerOtherContactInfo"/></td>
             </tr>
             </tbody>
         </table>

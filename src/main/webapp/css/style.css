@@ -58,9 +58,9 @@ div {
 }
 
 .vie {
-    background-image: none;
+    background-image: url("/images/hand.jpeg");
     background-position: center;
-    background: darkgray;
+
 }
 
 .addTd {
@@ -92,11 +92,11 @@ a {
 
 }
 
-a:hover {
+a :hover {
     background: linear-gradient(darkgray, darkslategray);
 }
 
-a:active {
+a :active {
     position: relative;
     top: 1px;
 }
@@ -138,5 +138,22 @@ a:active {
     color: darkred;
     visibility: hidden;
 }
+#printDiv {
+    width: 794px;
+    height: 1123px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#borderDiv {
+    border-style: solid;
+    border-width: thick;
+    border-color: lightseagreen;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+
 
 

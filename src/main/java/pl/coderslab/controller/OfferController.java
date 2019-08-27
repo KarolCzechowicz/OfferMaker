@@ -85,8 +85,9 @@ public class OfferController {
         offer.setUserLogin(login);
         offer.setUserEmail(email);
 
-        Date date = Calendar.getInstance().getTime();
-        offer.setUpdated(date);
+        Date dateUpdated = Calendar.getInstance().getTime();
+        offer.setUpdated(dateUpdated);
+
         offerRepository.save(offer);
         return "redirect:/offer/all";
     }

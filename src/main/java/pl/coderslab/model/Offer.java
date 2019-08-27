@@ -1,5 +1,8 @@
 package pl.coderslab.model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -13,15 +16,22 @@ public class Offer {
     @ManyToOne
     private Car car;
 
+    @NotEmpty
     private String dateFrom;
 
+    @NotEmpty
     private String dateTo;
 
+    @NotEmpty
     private String price;
 
     private String info;
 
-    private String customer;
+    @Email
+    @NotEmpty
+    private String customerEmail;
+
+    private String customerOtherContactInfo;
 
     private Date created;
 
@@ -79,12 +89,20 @@ public class Offer {
         this.info = info;
     }
 
-    public String getCustomer() {
-        return customer;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public String getCustomerOtherContactInfo() {
+        return customerOtherContactInfo;
+    }
+
+    public void setCustomerOtherContactInfo(String customerOtherContactInfo) {
+        this.customerOtherContactInfo = customerOtherContactInfo;
     }
 
     public Date getCreated() {

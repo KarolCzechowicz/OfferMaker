@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/home/karol/Pulpit/Spring01hibernate/src/main/webapp/css/style.css"/>
 <html>
 <head>
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Success!</title>
 </head>
 <body class="add">
