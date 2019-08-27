@@ -168,7 +168,7 @@ Project Link: [https://github.com/KarolCzechowicz/OfferMaker](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/KarolCzechowicz/OfferMaker.svg?style=flat-square
 [issues-url]: https://github.com/KarolCzechowicz/OfferMaker/issues
 [license-shield]: https://img.shields.io/github/license/KarolCzechowicz/OfferMaker.svg?style=flat-square
-[license-url]: https://github.com/KarolCzechowicz/OfferMaker/blob/master/LICENSE.txt
+[license-url]: https://github.com/KarolCzechowicz/OfferMaker/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/karolczechowicz
 [product-screenshot]: images/screenshot.png
